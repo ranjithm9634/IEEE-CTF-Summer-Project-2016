@@ -1,0 +1,32 @@
+a=int(raw_input('Enter the decimal to convert '))
+def dectobin(a):
+	bin=' '
+	while a>0:
+		if a%2==1:
+			bin='1'+bin
+		else:
+			bin='0'+bin
+		a/=2
+	bin.rstrip()	
+	return bin	
+print 'binary-> '+ dectobin(a)
+def dectooct(a):
+	oct=' '
+	octstr='01234567'
+	while a>0:
+		x=a%8
+		oct=octstr[x]+oct
+		a=a/8
+	oct.rstrip()
+	return oct
+print 'octal-> '+dectooct(a)
+def dectohex(a):
+	hex=' '
+	hexstr='0123456789ABCDEF'
+	while a>0:
+		x=a%16
+		hex=hexstr[x]+hex
+		a=a/16
+		hex.rstrip()
+	return hex
+print 'hexadecimal-> '+dectohex(a)	

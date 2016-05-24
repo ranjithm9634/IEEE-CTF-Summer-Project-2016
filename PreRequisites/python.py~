@@ -1,0 +1,11 @@
+print "hello!"
+for i in range(2,22,2):
+	print i,
+print 'End of loop'	
+x= 'Python Is Too Good'
+for i in x:
+	if i=='a' or i=='e' or i=='i' or i=='o' or i=='u':
+		print 'Vowel ',i
+	else:
+		print 'consonant ',i
+			

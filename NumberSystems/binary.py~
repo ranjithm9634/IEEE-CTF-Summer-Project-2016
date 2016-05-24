@@ -1,0 +1,45 @@
+a=int(raw_input('Enter binary to convert'))
+def bintodec(b):
+	d=0
+	i=0
+	while b>0:
+		d= d+(b%10)*(2**i)
+		b=b/10
+		i=i+1
+	return d	
+print 'decimal-> ',	
+print bintodec(a)		
+def bintooct(c):
+	o=0
+	p=0
+	while c>0:
+		i=0
+		a=0
+		x= c%1000
+		while x>0:
+			a=a+(x%10)*(2**i)
+			x=x/10
+			i=i+1
+		c=c/1000
+		o=o+a*(10**p)	
+		p=p+1
+	return o
+print 'octal-> ',	
+print bintooct(a)		
+def bintohex(b):
+	hex=' '
+	hexstr='0123456789ABCDEF'
+	while b>0:
+		a=0
+		i=0
+		x=b%10000
+		while x>0:
+			a=a+(x%10)*(2**i)
+			i=i+1
+			x/=10
+		b=b/10000	
+		hex=hexstr[a]+hex
+	hex.rstrip()
+	return hex
+print 'hexadecimal-> ',	
+print bintohex(a)	
